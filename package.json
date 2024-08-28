@@ -18,7 +18,11 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
-    "rxjs": "~7.8.0",
+    "bootstrap": "^5.3.3",
+    "font-awesome": "^4.7.0",
+    "ngx-csv": "^0.3.2",
+    "rxjs": "^6.6.7",
+    "rxjs-compat": "^6.6.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },

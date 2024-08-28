@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row" *ngIf="active">
+        <h3>welcom {{firstName}}</h3>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row" *ngIf="active" style="background-color: aqua;">
+        <h3>you name is  {{firstName}}</h3>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row ">
+        <table>
+            <tr>
+                <th><i class="fa fa-user "></i> Name </th>
+                <th>Code</th>
+                <th>Country</th>
+              
+            </tr>
+            <tr *ngFor= "let item of dataList">
+                <td> {{item.name}}</td>
+                <td>{{item.code}}</td>
+                <td>{{item.country}}</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+    <div [ngSwitch]="name" >
+        <div *ngSwitchCase="'adil'"> welcom moussa</div>
+        <div *ngSwitchCase="'mousa'"> welcom moussa</div>
+        <div *ngSwitchCase="'grégoire'"> welcom moussa</div>
+
+    </div>
+
+</div>
+</div>
+

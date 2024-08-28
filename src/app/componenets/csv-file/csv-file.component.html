@@ -1,0 +1,23 @@
+<p>csv-file works!</p>
+<div class="row ">
+    <div class="col-md-1 offset-md-8">
+        <i class="fa fa-solid fa-download fa-lg" aria-hidden ="true" (click)="downolodCVS()"></i>   
+    </div>
+
+</div>
+<table class="table">
+    <thead>
+        <th>name</th>
+        <th>age</th>
+        <th>average</th>
+        <th>approved</th>
+        <th>description</th>
+    </thead>
+    <tbody *ngFor="let item of data">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.average}}</td>
+        <td>{{item.approved}}</td>
+        <td>{{item.description}}</td>
+    </tbody>
+</table>

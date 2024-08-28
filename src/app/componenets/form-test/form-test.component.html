@@ -1,0 +1,73 @@
+<div class="container">
+    <h3>Contact</h3>
+    <form autocomplete="off" #formLoginAtt="ngForm" (submit)="onSubmit(formLoginAtt)" >
+        <div class="form-group">
+            <label for ="email">email</label>
+            <input type="email" id="email" 
+            class="form-control" 
+            [(ngModel)]="login.email"
+            ngModel name = "email"
+            #email = "ngModel" 
+            required
+            minlength="5"
+            maxlength="20"
+            >
+            <!-- pattern="CompanyA -->
+            <div class="alert alert-danger" *ngIf ="email.touched && !email.valid">
+                <div *ngIf ="email.errors?.['required']"> required</div>
+                <div *ngIf ="email.errors?.['minlength']"> min 5</div>
+                <div *ngIf ="email.errors?.['maxlength']"> max 20</div>
+                
+            <!-- <div *ngIf ="email.errors?.['pattern']"> required inlude CompanyA</div>-->
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for ="password">password</label>
+            <input type="password" id="password" 
+            class="form-control"
+            [(ngModel)]="login.passWord"
+            ngModel name = "password"
+            ngModel="#password" 
+            #password = "ngModel" 
+            required
+            minlength="5"
+            maxlength="20"
+
+            >
+             <!-- pattern="CompanyA -->
+             <div class="alert alert-danger" *ngIf ="password.touched && !password.valid">
+                <div *ngIf ="password.errors?.['required']"> required</div>
+                <div *ngIf ="password.errors?.['minlength']"> min 5</div>
+                <div *ngIf ="password.errors?.['maxlength']"> max 20</div>
+                
+            <!-- <div *ngIf ="email.errors?.['pattern']"> required inlude CompanyA</div>-->
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword"> Confirm password</label>
+            <input type="password" name="confirmPassword" id ="confirmPassword"
+             class="form-control"
+              #confirmPassword = "ngModel"  
+               [(ngModel)]="confirmPass" 
+               pattern="{{login.passWord}}"
+               required
+             >
+             <div class="alert alert-danger" *ngIf ="confirmPassword.touched && !confirmPassword.valid">
+                <div *ngIf ="confirmPassword.errors?.['required']"> required</div>
+                <div *ngIf ="confirmPassword.errors?.['minlength']"> min 5</div>
+                <div *ngIf ="confirmPassword.errors?.['maxlength']"> max 20</div>
+                
+            <!-- <div *ngIf ="email.errors?.['pattern']"> required inlude CompanyA</div>-->
+
+            </div>
+        </div>
+        <br>
+       
+        <button class="btn btn-danger" type="submit"> Valider</button>
+
+    </form>
+
+
+</div>
