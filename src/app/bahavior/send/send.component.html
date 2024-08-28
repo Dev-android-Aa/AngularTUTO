@@ -1,0 +1,17 @@
+<p>send works!</p>
+<div class="container ">
+<form autocomplete="off" #form ="ngForm" (submit)="sendName(form)">
+    <div class="form-group">
+        <div class = "row mt-5">
+            <div class="col-md-5 offset-md-4">
+                <label> Your name</label>
+                <input type="text" class="form-control" name="yourName" [(ngModel)]="yourName">
+            </div>
+            <div class="col-md-2" style="margin-top: 32px;">
+                <button type="submit" class="btn btn-success"> Send Name</button>
+            </div>
+        </div>
+
+    </div>
+</form>
+</div>

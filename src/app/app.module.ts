@@ -15,6 +15,8 @@ import { ProductComponent } from './Service/product/product.component';
 import { ObservatrutComponent } from './componenets/observatrut/observatrut.component';
 import { FormTestComponent } from './componenets/form-test/form-test.component';
 import { CsvFileComponent } from './componenets/csv-file/csv-file.component';
+import { SendComponent } from './bahavior/send/send.component';
+import { RecieveComponent } from './bahavior/recieve/recieve.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { CsvFileComponent } from './componenets/csv-file/csv-file.component';
     ProductComponent,
     ObservatrutComponent,
     FormTestComponent,
-    CsvFileComponent
+    CsvFileComponent,
+    SendComponent,
+    RecieveComponent
   ],
   imports: [
     BrowserModule,
